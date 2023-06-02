@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id("io.freefair.lombok") version "8.0.1"
+}
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.github.tomakehurst:wiremock:3.0.0-beta-8'
+    implementation 'ch.qos.logback:logback-classic:1.4.7'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.circlek.ngrp.wiremock.WireMockMain'
+    }
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    zip64(true);
+}
+

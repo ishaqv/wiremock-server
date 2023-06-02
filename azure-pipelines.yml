@@ -1,0 +1,39 @@
+trigger:
+  - master
+
+ # no PR builds
+pr: none
+
+resources:
+  - repo: self
+
+variables:
+  tag: '$(Build.BuildId)'
+
+stages:
+  - stage: Build
+    displayName: Build image
+    jobs:
+      - job: Build
+        displayName: Build
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - task: Docker@2
+            displayName: Build an image
+            inputs:
+              command: buildAndPush
+              repository: ngrp-services-menu
+              dockerfile: '**/Dockerfile'
+              containerRegistry: 'Azure Container Registry Connection'
+              tags:
+                $(tag)
+          - task: CopyFiles@2
+            inputs:
+              Contents: 'deployment.azure.yml'
+              TargetFolder: '$(Build.ArtifactStagingDirectory)'
+          - task: PublishBuildArtifacts@1
+            inputs:
+              PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+              ArtifactName: 'drop'
+              publishLocation: 'Container'
