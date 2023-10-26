@@ -1,0 +1,114 @@
+{
+  "isError": false,
+  "data": {
+    "id": "35774110-e97a-4117-9255-590f8c4c4e58",
+    "firstName": "",
+    "lastName": "",
+    "middleName": "",
+    "namePrefix": null,
+    "nameSuffix": null,
+    "gender": null,
+    "memberStatus": "Active",
+    "preferredLanguage": null,
+    "isEmployee": false,
+    "alternateId": "00u15s2d7p3m1oPVm0h8",
+    "programOptInDate": "2023-07-27T10:49:54+00:00",
+    "programOptInDateOffset": "00:00:00",
+    "lastActivityDate": "2023-07-28T08:45:24.770701+00:00",
+    "createdDate": "2023-07-27T10:49:54+00:00",
+    "programId": 1001,
+    "memberCloseDate": null,
+    "birthDate": null,
+    "emailOptIn": false,
+    "emailOptInDate": null,
+    "smsOptIn": false,
+    "smsOptInDate": null,
+    "directMailOptIn": false,
+    "directMailOptInDate": null,
+    "memberStatusEffectiveDate": null,
+    "ageVerified": false,
+    "memberCountry": "United States of America",
+    "loyaltyCards": [
+      {
+        "id": "ef7ab126-86ba-41d7-80ac-407508411a57",
+        "dateIssued": "2023-07-27T10:49:54+00:00",
+        "dateRegistered": "2023-07-27T10:49:54+00:00",
+        "expirationDate": "9999-12-30T23:59:59+00:00",
+        "isPrimary": true,
+        "cardNumber": "8018782603617321469875",
+        "extensions": {
+          "properties": null
+        }
+      }
+    ],
+    "memberProgramAddresses": [],
+    "memberProgramPhoneNumbers": [
+      {
+        "id": "318f7582-e95b-4038-b35d-66e0efc82086",
+        "contactType": "Primary",
+        "countryCode": 1,
+        "phone": "{{$body 'memberIdentityRequest.phone'}}"
+      }
+    ],
+    "memberProgramEmailAddresses": [],
+    "extensions": {
+      "properties": [
+        {
+          "name": "IsFullyEnrolled",
+          "value": "true"
+        },
+        {
+          "name": "GMAPFirstSelectedStore",
+          "value": "-"
+        },
+        {
+          "name": "ICEnrollmentDateTime",
+          "value": "2999-01-01T00:00:00+00:00"
+        },
+        {
+          "name": "GMAPEngagementFlag",
+          "value": "true"
+        },
+        {
+          "name": "GMAPSelectedStore",
+          "value": "2705549"
+        },
+        {
+          "name": "ICTransactionDateTime",
+          "value": "2023-07-27T06:49:54-04:00"
+        },
+        {
+          "name": "ICEnrollmentMethod",
+          "value": "GMAP"
+        },
+        {
+          "name": "ICTransactionFlag",
+          "value": "true"
+        },
+        {
+          "name": "IsScanCard",
+          "value": "false"
+        },
+        {
+          "name": "SourceExtractDateTime",
+          "value": "1900-01-01T00:00:00-05:00"
+        },
+        {
+          "name": "SourceSystem",
+          "value": "-"
+        },
+        {
+          "name": "PartialEnrollmentSource",
+          "value": "Indoor"
+        }
+      ]
+    }
+  },
+  "developerMessage": "Success",
+  "userMessage": "Success",
+  "moreInfo": null,
+  "responseCode": 30000,
+  "httpStatusCode": 200,
+  "errors": null,
+  "requestId": null
+}

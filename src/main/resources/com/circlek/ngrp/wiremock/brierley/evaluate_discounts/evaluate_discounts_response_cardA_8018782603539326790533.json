@@ -1,0 +1,35 @@
+{
+  "data": {
+    "businessEntityId": 1001,
+    "externalHeaderId": "2705549-2023-10-25-E780-200268217000",
+    "externalStoreId": "2705549",
+    "id": "27856ef2-8cba-487e-b2e7-de30530c3f0a",
+    "promotions": [],
+    "rewards": [
+      {
+        "discountAmount": 0.25,
+        "discountedQuantity": 1.0,
+        "discountedUPC": "01-00-00",
+        "externalDetailId": "2705549-2023-10-25-E780-200268217000-1",
+        "isItemDiscount": false,
+        "lineItemNumber": 1,
+        "maxQuantity": 35.0,
+        "memberProgramRewardUuid": "bfebd328-5934-4e3c-b29d-d82e964523e2",
+        "rewardTypeName": "Fuel",
+        "rewardUuid": "03a2dfba-28a2-4fa9-bf67-328330f14dc1",
+        "singleDiscountAmount": 0.25,
+        "taxReduce": true
+      }
+    ],
+    "transactionDate": "2023-10-25T12:43:29-07:00",
+    "transactionNumber": "2705549-2023-10-25-E780-200268217000"
+  },
+  "developerMessage": "operation executed successfully",
+  "errors": null,
+  "httpStatusCode": 200,
+  "isError": false,
+  "moreInfo": null,
+  "requestId": null,
+  "responseCode": 30000,
+  "userMessage": "operation executed successfully"
+}

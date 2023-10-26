@@ -1,0 +1,30 @@
+{
+  "externalStoreId": "2705549",
+  "businessEntityId": 1001,
+  "externalHeaderId": "4701428-2022-06-02-0000",
+  "transactionAmount": 10.87,
+  "totalSaleAmount": 10.87,
+  "totalRetailAmount": 10.87,
+  "transactionNumber": "4701428-2022-06-02-0000",
+  "transactionDate": "2022-06-02T12:00:00.000Z",
+  "channel": "POS",
+  "transactionType": 1,
+  "detailItems": [
+    {
+      "externalDetailId": "2705549-2022-06-02-0000-1",
+      "externalProductId": "000019428330132-1",
+      "saleAmount": 8.58,
+      "retailAmount": 4.29,
+      "discountAmount": 0,
+      "quantity": 2,
+      "isTaxable": false,
+      "lineItemNumber": 1
+    }
+  ],
+  "cardIdentity": {
+    "number": "8018782603539326790533"
+  },
+  "saveOptions": {
+    "executionMode": "Real"
+  }
+}

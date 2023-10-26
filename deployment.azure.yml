@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: services-wiremock
-          image: ngrpdevregistry.azurecr.io/ngrp-wiremock-server:#{Build.BuildId}#
+          image: ngrpdevregistry.azurecr.io/ngrp-wiremock-server:3
           livenessProbe:
             httpGet:
               path: /status
@@ -24,6 +24,7 @@ spec:
             periodSeconds: 300
           ports:
             - containerPort: 8080
+            - containerPort: 8443
       imagePullSecrets:
         - name: regcred
 ---
@@ -39,6 +40,11 @@ spec:
     app: services-wiremock
   ports:
     - protocol: TCP
+      name: http
       port: 8080
       targetPort: 8080
+    - protocol: TCP
+      name: https
+      port: 8443
+      targetPort: 8443
   type: LoadBalancer
