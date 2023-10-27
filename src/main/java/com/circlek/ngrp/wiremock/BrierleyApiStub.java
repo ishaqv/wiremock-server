@@ -43,6 +43,20 @@ public class BrierleyApiStub {
                         .withStatus(200)
                         .withHeader("Content-Type", "application/json")
                         .withBody(getFileAsString("brierley/evaluate_discounts/evaluate_discounts_response_cardA_8018782603539326790533.json"))));
+
+        //Rewards API
+        stubFor(get(urlEqualTo("/redemptions/api/v1/rewards"))
+                .willReturn(aResponse()
+                .withStatus(200)
+                .withHeader("Content-Type", "application/json")
+                .withBody(getFileAsString("brierley/rewards/all_rewards_response.json"))));
+
+        //Promotions API
+        stubFor(get(urlMatching("/redemptions/api/v1/promotions/program/\\d+"))
+                .willReturn(aResponse()
+                        .withStatus(200)
+                        .withHeader("Content-Type", "application/json")
+                        .withBody(getFileAsString("brierley/promotions/all_promotions_response.json"))));
     }
 
     @SneakyThrows
