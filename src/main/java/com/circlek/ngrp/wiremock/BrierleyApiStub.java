@@ -57,6 +57,13 @@ public class BrierleyApiStub {
                         .withStatus(200)
                         .withHeader("Content-Type", "application/json")
                         .withBody(getFileAsString("brierley/promotions/all_promotions_response.json"))));
+
+        // Brierley Member Reward Search API
+        stubFor(post(urlEqualTo("/member/api/v1/members/rewards/search"))
+                .willReturn(aResponse()
+                        .withStatus(200)
+                        .withHeader("Content-Type", "application/json")
+                        .withBody(getFileAsString("brierley/member_reward_search/member_reward_search_response.json"))));
     }
 
     @SneakyThrows
