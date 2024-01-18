@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: services-wiremock
-          image: ngrpdevregistry.azurecr.io/ngrp-wiremock-server:3
+          image: ngrpdevregistry.azurecr.io/ngrp-wiremock-server:#{Build.BuildId}#
           livenessProbe:
             httpGet:
               path: /status
